@@ -19,7 +19,8 @@
     "cssnano": "^4.1.10"
   },
   "scripts": {
-    "par": "parcel src/main.js"
+    "par": "parcel src/main.js",
+"start":"node index"
   },
   "author": "",
   "license": "ISC"
