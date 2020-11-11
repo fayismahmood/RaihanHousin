@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body style="overflow: auto;">
+    <div id="Results">
+        <div class="FullResult">
+            <div class="__head">
+                <div>Program</div>
+                <div>First</div>
+                <div>Secound</div>
+                <div>Third</div>
+                <div>Grades</div>
+            </div>
+            <div class="ResCont">
+            <%
+            res.map(e=>{%>
+            <div>
+                <div class="ProgramName"><%=e.prog%></div>
+                    <div>
+                        <div>
+                            <%=e.winner.f.adno%>
+                        </div>
+                        <div class="_grade">
+                            <%=e.winner.f.grade%>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <%=e.winner.s.adno%>
+                        </div>
+                        <div className="_grade">
+                            <%=e.winner.s.grade%>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <%=e.winner.t.adno%>
+                        </div>
+                        <div className="_grade">
+                            <%=e.winner.t.grade%>
+                        </div>
+                    </div>
+                    <div>
+                        <%e.grades.map(e=>{%>
+                            <div>
+                                <span><%=e.adno %></span>
+                                <b><%=e.grade %></b>
+                            </div>
+                        <%})%>
+                    </div>
+            </div>
+            
+            <%})
+        %>
+        </div>
+        </div>
+</div>
+
+
+<div class="Adder">
+    ProgName:<input type="text" name="" id="progName"><br>
+    First:<input type="text" name="" id="First"><select selfor="First" name="" id=""><option>A</option><option>b</option><option value="null">No</option></select><br>
+    Second:<input type="text" name="" id="Second"><select selfor="Second" name="" id=""><option>A</option><option>b</option><option value="null">No</option></select><br>
+    Third:<input type="text" name="" id="Third"><select selfor="Third" name="" id=""><option>A</option><option>b</option><option value="null">No</option></select><br>
+    Grades: <input type="text" name="" id="Grades">
+    <button id="Adder">
+        Add
+    </button>
+
+
+</div>
+    <script>
+        let progName=document.querySelector("#progName")
+        let Adder=document.querySelector("#Adder")
+        let First=document.querySelector("#First")
+        let Second=document.querySelector("#Second")
+        let Third=document.querySelector("#Third")
+        let Grades=document.querySelector("#Grades")
+
+        let FirstGrade=document.querySelector("[selfor=First]")
+        let SecondGrade=document.querySelector("[selfor=Second]")
+        let ThirdGrade=document.querySelector("[selfor=Third]")
+
+       
+        
+        Adder.onclick=()=>{
+            grades=Grades.value.split(",")
+            grades.forEach((e,i)=>{
+                grades[i]={adno:e.split(":")[0],grade:e.split(":")[1]}
+            })
+            let data={
+                prog:progName.value,
+                winner:{
+                    f:{adno:First.value,grade:FirstGrade.value},
+                    s:{adno:Second.value,grade:SecondGrade.value},
+                    t:{adno:Third.value,grade:ThirdGrade.value},
+                },
+                grades:grades
+
+            }
+           
+            fetch("../api/results",{
+                method:"POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify(data)
+            }).then(e=>e.text()).then(e=>{
+                alert(e)
+                console.log(data);
+            })
+
+            
+        }
+        
+    </script>
+</body>
+</html>

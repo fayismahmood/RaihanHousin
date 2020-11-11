@@ -1,0 +1,33 @@
+{
+  "std": [
+    {
+      "name": "FayisT",
+      "adno": "207",
+      "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAYAAACaq43EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAQ8SURBVEhLxZVdbJNVGMd//Vg/39J2He0oGxuUSRnIcDghQ2C4CIsQAsTEO9SAF5pgSIgkJlwZQojGD9DEhAgh4o0mC9EQGMExEQRD9sFgbOI+uw+g7UrXvmu3rn17fKcXXqDbihc+5/ac53f+z/N/ztEINfgfQpsL81bjJQ69sZ0j7735xLHwo0e5pCIncPhBgOFAHz/Wn3kCcv3caVpu/szdO21zusCcwSk5yekTJ0kPRbCO/537Xnsr8TEZ0R/i+OGD7KysnBOY6R7PFs2td8T+A++LErtbnP30A3HwrX2ir71FnP/qhDi8b4/YXlUqCk2S2FK5QpQUWMS5ppNiPPF4xrSzKhZZwdlTX1KxGGrWz8deVIrJKvH5J4doVMubFgYmdFpqa59hvneYPa+muXjxBx6PRUnI8r+qnxH829UrHDl6jJaBQcwWPR6PkxsN32I3KNSfa+R6ZzcjYZkJOc7uLZUYTSUIrYPGuw/ovHeb+jMf0nT+m3+Ezwj+7MBeblxrwlJgoHs4TmHlVjQrNjHpLASLnazdh89XyEKfhyvXfgWpjFA0RaZ1hKGOVtpuXmJl1Uu5g/Xla9m8ZjV+nZ5ssZ8R8gjFInTHI9Tueg39ZIx0OISccVF/uRNZa2AoUUxWTGJweIlE4sz3eOcOnkom+fid1/FICkpikPJnywlFIsgPo0gTGawKhAYfYnHZuD8apNSbQVIrUGS2ER2NkExNMHS7FX9FbW49NlgsKJMK8aBMS3MzD6MjNF/9nsD9fpQpHQ6jRGxc5nZzBz0Dwzisi3A4NbgdScymQpz5Ro5/cYrV61/ODTy9e+O2HaRU0zDPS6x3BLeq5nrjT3zX0EhTWycFxQup2VpHSVkxmqFRQvEk/YHfMRoN6ExGli+XWLdxU+7gig01dLa2s2BJGQ1XmsFWTGIshG1yiDK5hXKPhG9xAalEhNFsBnu+hf5+mWhomNjYOAmhJd/pzB1sdrtZuWs3S4uK0BnALHdTuHCBqmQZO/ceRatJI5lRZzVMNKneS5K4/EsXwbBCWl0b17844ws24zjV7NjJsSPH1X6mqPDaWFdVjEEkuPD1R1htFjo6u+geiLDGr+c5aZqjJTIaJ08oVFfXPD247pUd6FSQz+dnfMLIg8dmXC4Jq0lHe0cvV28FVIUpegYTREIZTKopdUYzU6rrV1ZtfXqwyZCHw27lbtsdwvEEHqtQDadHci9nIBilQJ1Rl8uKwaCndI0bo1pikVXQ68G/YtXTg6dPrq3ZzKoXNtDRFcBfuoBxjZ48rZ5lXhfLlhRhz5vEKFnQKhnSyl/g2rq6WX+oWT+Jt/e/S3A4oDo1jiN/Hr09fWjz7dzv7qGvtx+nJUMwFMSqzyOLRn21VPCmbf8d/Hz1ZpYu9TGV0WCzWkikEnQZq3GY7X+aaSqrIxqLkTVbyCpCVZxlUdGSWcF/AHep+JBDRx3jAAAAAElFTkSuQmCC"
+    }
+  ],
+  "result": [
+    {
+      "prog": "adf",
+      "winner": {
+        "f": {
+          "adno": "207",
+          "grade": "A"
+        },
+        "s": {
+          "adno": "207",
+          "grade": "A"
+        },
+        "t": {
+          "adno": "207",
+          "grade": "A"
+        }
+      },
+      "grades": [
+        {
+          "adno": ""
+        }
+      ]
+    }
+  ]
+}

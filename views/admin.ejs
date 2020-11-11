@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Curr{
+            width: 100%;
+            padding: 20px;
+           
+            display: grid;
+            grid-auto-flow: row;
+            grid-gap: 10px;
+        }
+        .Curr>._e{
+            display: grid;
+            grid-template-columns: 80px 200px 80px;
+            background: #f3eff7;
+        }
+        .Curr>._e>div{
+            height: 60px;
+            display: grid;
+            place-items: center;
+        }
+        .Curr>._e>.img{
+            height: 40px;
+            width: 40px;
+            margin: 10px;
+            background-size: cover;
+        }
+        .adder{
+            padding: 30px 50px;
+            
+        }
+        input{
+                padding: 5px;
+                border: solid #221e25;
+                margin: 10px;
+            }
+        button{
+            border: solid #221e25;
+            margin: 10px;
+            background: none;
+            font-size: 18px;
+            color:#221e25 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="Curr">
+        <% std.map(e=>{%>
+            <div class="_e">
+                <div><%=e.adno%></div>
+                <div><%=e.name%></div>
+                <div class="img" style="background-image: url(<%= e.img %>);"></div>
+            </div>
+        <%}) %>
+    </div>
+    <div class="adder">
+        <input type="text" name="" id="Adno"><br>
+        <input type="text" name="" id="Name"><br>
+        <input type="file" name="" id="_file"><br>
+
+        <button id="sub">Submit</button>
+    </div>
+    <script>
+            
+           
+              
+            
+        document.querySelector("#sub").onclick=function (){
+            
+
+            let Name=document.querySelector("#Name").value
+            let Adno=document.querySelector("#Adno").value
+            
+            let data={
+                name:Name,
+                adno:Adno,
+                img:null
+            }
+
+            var _file=document.querySelector("#_file")
+
+            let reader = new FileReader();
+            reader.onload = function() {
+                data.img=reader.result;
+             
+
+
+
+
+                fetch("./addMember", {
+                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                    
+                    headers: {
+                        
+                    'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: JSON.stringify(data) // body data type must match "Content-Type" header
+                }).then(e=>e.text()).then(e=>{
+                    console.log(e);
+                    if(e=="Set"){
+                        alert("Set")
+                    }else{
+                        alert("Er")
+                    }
+                });
+            };
+            if(_file.files[0]){
+                    reader.readAsDataURL(_file.files[0])
+            }
+
+
+
+            
+           
+            
+        }
+    </script>
+</body>
+</html>
