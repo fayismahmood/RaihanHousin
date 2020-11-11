@@ -1,0 +1,45 @@
+#AboutUs{
+    height: 100vh;
+    
+    &>div{
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 500px auto;
+
+        @media (max-width:500px) {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            grid-template-columns:none;
+            
+            grid-template-rows: 60vh 40vh;
+            &>.sidePic{
+                clip-path: polygon(0 38%, 100% 0, 100% 100%, 0% 100%) !important;
+            }
+        }
+
+        &>.cont{
+            padding: 10vw;
+            &>.__icon{
+                height: 100px;
+                width: 100px;
+                background-repeat: no-repeat;
+                background: url("./img/about-us.svg");
+            }
+            h1{
+                margin: 0;
+                color: $charcoal;
+            }
+            p{
+                font-size: 18px;
+                
+            }
+        }
+        &>.sidePic{
+            background-size: cover;
+            clip-path: polygon(45% 0, 100% 0, 99% 100%, 0 100%);
+            background-image: url("./img/book.jpg");
+        }
+    }
+}
